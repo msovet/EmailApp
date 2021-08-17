@@ -1,4 +1,4 @@
-package com.company.email;
+package com.company.emailapp;
 
 public class Main {
 

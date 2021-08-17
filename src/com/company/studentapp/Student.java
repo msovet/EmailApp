@@ -1,4 +1,4 @@
-package com.company.studentApp;
+package com.company.studentapp;
 
 import java.util.Scanner;
 
@@ -28,8 +28,6 @@ public class Student {
         this.gradeYear = in.nextInt();
 
         setStudentId();
-
-        System.out.println(firstName + " " + lastName + " course: "+ gradeYear + " Student id:" + studentId);
     }
 
     // Generate unique ID
@@ -49,7 +47,26 @@ public class Student {
                 tuitionBalance += courseCost;
             } else {break;}
         }
+    }
+
+    // view balance
+    public void getBalance() {
+        System.out.println("Your balance: " + tuitionBalance);
+    }
+
+    public void payTuition() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter your payment: ");
+        int payment = in.nextInt();
+        tuitionBalance = tuitionBalance - payment;
+        System.out.println("You have paid: " + payment);
+    }
+
+    public void showInfo() {
+        System.out.println(firstName + " " + lastName + " course: "+ gradeYear + " Student id:" + studentId);
         System.out.println("ENROLLED COURSES: " + courses);
-        System.out.println("OKU TOLEMI: " + tuitionBalance);
+        getBalance();
+        payTuition();
+        getBalance();
     }
 }

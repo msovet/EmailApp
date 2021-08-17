@@ -1,6 +1,5 @@
-package com.company.email;
+package com.company.emailapp;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Email {
