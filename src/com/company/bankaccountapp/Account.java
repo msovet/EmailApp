@@ -11,4 +11,12 @@ public abstract class Account implements IBaseRate{
     public Account(String name) {
         System.out.println("ACCOUNT SUPER " + name);
     }
+
+    private void sendMessage() {
+        System.out.println("message");
+    }
+
+    public void getSend() {
+        sendMessage();
+    }
 }
