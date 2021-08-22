@@ -10,9 +10,13 @@ public class BankAccountApp {
 
 
 //        cAcc.getSend();
-        sAcc.showInfo();
-        System.out.println("**************");
-        cAcc.showInfo();
+//        sAcc.showInfo();
+//        System.out.println("**************");
+//        cAcc.showInfo();
 //        ch.showInfo();
+        sAcc.printBalance();
+        sAcc.deposit(800);
+        sAcc.withdraw(300);
+        sAcc.transfer("Mereyge", 2000);
     }
 }

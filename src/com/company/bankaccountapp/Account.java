@@ -21,6 +21,27 @@ public abstract class Account implements IBaseRate{
 
     public abstract void setRate();
 
+    public void deposit(double amount) {
+        balance = balance + amount;
+        System.out.println("Depositing $" + amount);
+        printBalance();
+    }
+
+    public void withdraw(double amount) {
+        balance = balance - amount;
+        System.out.println("Withdrawing $" + amount);
+        printBalance();
+    }
+
+    public void transfer(String toWhere, double amount) {
+        balance = balance - amount;
+        System.out.println("$" + amount + "transferred to " + toWhere);
+        printBalance();
+    }
+
+    public void printBalance() {
+        System.out.println("Your balance is now = $" + balance);
+    }
     private String generateAccountNumber() {
         String lastTwoSSN = SSN.substring(SSN.length()-2, SSN.length());
         int uniqueId = index++;
