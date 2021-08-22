@@ -21,6 +21,13 @@ public abstract class Account implements IBaseRate{
 
     public abstract void setRate();
 
+    public void compound() {
+        double accruedInterest = balance * (rate/100);
+        balance = balance + accruedInterest;
+        System.out.println("Accrued Interest " + accruedInterest);
+        printBalance();
+    }
+
     public void deposit(double amount) {
         balance = balance + amount;
         System.out.println("Depositing $" + amount);

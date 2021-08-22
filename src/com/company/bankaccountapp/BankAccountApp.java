@@ -18,5 +18,7 @@ public class BankAccountApp {
         sAcc.deposit(800);
         sAcc.withdraw(300);
         sAcc.transfer("Mereyge", 2000);
+        System.out.println("*******************");
+        sAcc.compound();
     }
 }
