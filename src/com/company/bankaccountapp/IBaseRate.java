@@ -1,9 +1,7 @@
 package com.company.bankaccountapp;
 
 public interface IBaseRate {
-//    int age = 0;
-//
-//    String str = new String("qweqwe");
-//
-//    void checkBalance();
+    default int getBaseRate() {
+        return 250;
+    }
 }
