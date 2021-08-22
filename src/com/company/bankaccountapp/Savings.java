@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Savings extends Account{
     // List properties specific to Saving's account
-    int safetyDepositBoxId;
-    int safetyDepositBoxKey;
+    private int safetyDepositBoxId;
+    private int safetyDepositBoxKey;
 
     // Contructor
     public Savings(String name, String SSN, double initDeposit) {

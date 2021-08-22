@@ -4,12 +4,12 @@ import java.util.Random;
 
 public abstract class Account implements IBaseRate{
     // main properties for bank account
-    String name;
-    String SSN;
-    double balance;
-    String accountNumber;
-    double rate;
-    static int index = 10000;
+    private String name;
+    private String SSN;
+    private double balance;
+    protected String accountNumber;
+    protected double rate;
+    private static int index = 10000;
 
     public Account(String name, String SSN, double initDeposit) {
         this.name = name;
