@@ -6,7 +6,7 @@ public class BankAccountApp {
     public static void main(String[] args) {
         Savings sAcc = new Savings("Sagat", "123456789", 5000);
         Checking cAcc = new Checking("Bolat", "123123123", 3000);
-        Child ch = new Child("Child" , "12312311", 9000);
+//        Child ch = new Child("Child" , "12312311", 9000);
 
 
 //        cAcc.getSend();

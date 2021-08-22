@@ -1,7 +1,7 @@
 package com.company.bankaccountapp;
 
 public interface IBaseRate {
-    default int getBaseRate() {
-        return 250;
+    default double getBaseRate() {
+        return 2.5;
     }
 }

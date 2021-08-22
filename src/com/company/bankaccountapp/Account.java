@@ -16,7 +16,10 @@ public abstract class Account implements IBaseRate{
         this.SSN = SSN;
         this.balance = initDeposit;
         this.accountNumber = generateAccountNumber();
+        setRate();
     }
+
+    public abstract void setRate();
 
     private String generateAccountNumber() {
         String lastTwoSSN = SSN.substring(SSN.length()-2, SSN.length());
