@@ -23,14 +23,31 @@ public class BankAccountApp {
 //        System.out.println("*******************");
 //        sAcc.compound();
 
+        List<Account> accounts = new LinkedList<Account>();
+
         // Read CSV and create new accounts
         String file = "C:\\Users\\msovet\\Desktop\\courseDoc\\NewBankAccounts.csv";
         List<String[]> newCustomers = CSV.read(file);
         for (String [] newCustomer: newCustomers) {
-            System.out.print(newCustomer[0]);
-            System.out.print(newCustomer[1]);
-            System.out.print(newCustomer[2]);
-            System.out.println(newCustomer[3]);
+            String name = newCustomer[0];
+            String SSN = newCustomer[1];
+            String accountType = newCustomer[2];
+            String balance = newCustomer[3];
+
+            if (accountType.equals("Savings")) {
+                accounts.add(new Savings(name, SSN, Double.parseDouble(balance)));
+            }
+            else if (accountType.equals("Checking")) {
+                accounts.add(new Checking(name, SSN, Double.parseDouble(balance)));
+            }
+            else {
+                System.out.println("Error on reading account type");
+            }
+        }
+
+        for (Account acc:accounts) {
+            acc.showInfo();
+            System.out.println();
         }
     }
 }

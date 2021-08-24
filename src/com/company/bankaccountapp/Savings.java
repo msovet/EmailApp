@@ -26,7 +26,7 @@ public class Savings extends Account{
     }
 
     public void showInfo() {
-        System.out.println("Saving account: ");
+        System.out.println("SAVING account: ");
         super.showInfo();
         System.out.println("Your saving account features" +
                             "\n Safety box ID - " + safetyDepositBoxId +
