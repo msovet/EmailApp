@@ -1,8 +1,6 @@
 package com.company.bankaccountapp;
 
-import java.util.Random;
-
-public abstract class Account implements IBaseRate{
+public abstract class Account implements IBaseRate {
     // main properties for bank account
     private String name;
     private String SSN;
@@ -22,7 +20,7 @@ public abstract class Account implements IBaseRate{
     public abstract void setRate();
 
     public void compound() {
-        double accruedInterest = balance * (rate/100);
+        double accruedInterest = balance * (rate / 100);
         balance = balance + accruedInterest;
         System.out.println("Accrued Interest " + accruedInterest);
         printBalance();
@@ -49,8 +47,9 @@ public abstract class Account implements IBaseRate{
     public void printBalance() {
         System.out.println("Your balance is now = $" + balance);
     }
+
     private String generateAccountNumber() {
-        String lastTwoSSN = SSN.substring(SSN.length()-2, SSN.length());
+        String lastTwoSSN = SSN.substring(SSN.length() - 2, SSN.length());
         int uniqueId = index++;
         int randomNumber = (int) (Math.random() * Math.pow(10, 3));
 
@@ -60,9 +59,9 @@ public abstract class Account implements IBaseRate{
     protected void showInfo() {
         System.out.println(
                 "Name - " + name +
-                "\nSSN - " + SSN +
-                "\nBalance - $" + balance +
-                "\nAccountNumber - " + accountNumber
+                        "\nSSN - " + SSN +
+                        "\nBalance - $" + balance +
+                        "\nAccountNumber - " + accountNumber
         );
     }
 }
